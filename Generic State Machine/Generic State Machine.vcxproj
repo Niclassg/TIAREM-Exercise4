@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{530EB935-BF2D-4839-8D13-54321CF77481}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GenericStateMachine</RootNamespace>
+    <ProjectName>Exercise4</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\Generic State Machine\Application;$(SolutionDir)\Generic State Machine\Abstract OS;$(SolutionDir)\Generic State Machine\Application\Continuous Processing;$(SolutionDir)\Generic State Machine\Application\Discrete Processing;$(SolutionDir)\Generic State Machine\Application\Discrete Processing\States;$(SolutionDir)\Generic State Machine\Application\Discrete Processing\Commands;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Abstract OS\Thread.h" />
+    <ClInclude Include="Abstract OS\Thread_Mutex.h" />
+    <ClInclude Include="Abstract OS\Thread_Mutex_Guard.h" />
+    <ClInclude Include="Application\Continuous Processing\Algorithm.h" />
+    <ClInclude Include="Application\Continuous Processing\ContinuousProcessingThread.h" />
+    <ClInclude Include="Application\Continuous Processing\Input.h" />
+    <ClInclude Include="Application\Continuous Processing\Mode1Algorithm.h" />
+    <ClInclude Include="Application\Continuous Processing\Mode2Algorithm.h" />
+    <ClInclude Include="Application\Continuous Processing\Mode3Algorithm.h" />
+    <ClInclude Include="Application\Continuous Processing\Output.h" />
+    <ClInclude Include="Application\Continuous Processing\RealTimeInput.h" />
+    <ClInclude Include="Application\Continuous Processing\RealTimeOutput.h" />
+    <ClInclude Include="Application\Continuous Processing\SimulatedInput.h" />
+    <ClInclude Include="Application\Continuous Processing\SimulatedOutput.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\chMode.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Command.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\ConfigurationEnded.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Configure.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\ConfigX.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\eventX.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\eventY.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Exit.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Initialized.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Restart.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Resume.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\RunRealTime.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\SelfTestFailed.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\SelfTestOk.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Simulate.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Start.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Stop.h" />
+    <ClInclude Include="Application\Discrete Processing\Commands\Suspend.h" />
+    <ClInclude Include="Application\Discrete Processing\DiscreteProcessingThread.h" />
+    <ClInclude Include="Application\Discrete Processing\EmbeddedSystemX.h" />
+    <ClInclude Include="Application\Discrete Processing\States\ApplicationModeSetting.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Configuration.h" />
+    <ClInclude Include="Application\Discrete Processing\States\EmbeddedSystemXState.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Failure.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Initializing.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Mode1.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Mode2.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Mode3.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Operational.h" />
+    <ClInclude Include="Application\Discrete Processing\States\PowerOnSelfTest.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Ready.h" />
+    <ClInclude Include="Application\Discrete Processing\States\RealTimeExecution.h" />
+    <ClInclude Include="Application\Discrete Processing\States\RealTimeLoop.h" />
+    <ClInclude Include="Application\Discrete Processing\States\SimulateRealTimeModeState.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Simulation.h" />
+    <ClInclude Include="Application\Discrete Processing\States\Suspended.h" />
+    <ClInclude Include="Application\ProcessingMode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Abstract OS\Thread.cpp" />
+    <ClCompile Include="Abstract OS\Thread_Mutex.cpp" />
+    <ClCompile Include="Abstract OS\Thread_Mutex_Guard.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Algorithm.cpp" />
+    <ClCompile Include="Application\Continuous Processing\ContinuousProcessingThread.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Input.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Mode1Algorithm.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Mode2Algorithm.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Mode3Algorithm.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Output.cpp" />
+    <ClCompile Include="Application\Continuous Processing\RealTimeInput.cpp" />
+    <ClCompile Include="Application\Continuous Processing\RealTimeOutput.cpp" />
+    <ClCompile Include="Application\Continuous Processing\SimulatedInput.cpp" />
+    <ClCompile Include="Application\Continuous Processing\SimulatedOutput.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\chMode.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Command.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\ConfigurationEnded.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Configure.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\ConfigX.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\eventX.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\eventY.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Exit.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Initialized.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Restart.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Resume.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\RunRealTime.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\SelfTestFailed.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\SelfTestOk.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Simulate.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Start.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Stop.cpp" />
+    <ClCompile Include="Application\Discrete Processing\Commands\Suspend.cpp" />
+    <ClCompile Include="Application\Discrete Processing\DiscreteProcessingThread.cpp" />
+    <ClCompile Include="Application\Discrete Processing\EmbeddedSystemX.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\ApplicationModeSetting.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Configuration.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\EmbeddedSystemXState.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Failure.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Initializing.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Mode1.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Mode2.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Mode3.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Operational.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\PowerOnSelfTest.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Ready.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\RealTimeExecution.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\RealTimeLoop.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\SimulateRealTimeModeState.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Simulation.cpp" />
+    <ClCompile Include="Application\Discrete Processing\States\Suspended.cpp" />
+    <ClCompile Include="Application\ProcessingMode.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
