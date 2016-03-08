@@ -8,7 +8,7 @@ namespace Application{
 		public:
 			Output();
 			~Output();
-			virtual void outputResult(void);
+			virtual void write(void);
 		};
 
 	}

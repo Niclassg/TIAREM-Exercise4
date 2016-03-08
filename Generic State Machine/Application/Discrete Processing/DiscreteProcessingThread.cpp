@@ -37,24 +37,9 @@ namespace Application{
 		{
 			using namespace std;
 
-			cout << "Type the number to execute the command:" << endl;
-			cout << "1  - SelfTestOk" << endl;
-			cout << "2  - SelfTestFailed" << endl;
-			cout << "3  - Initialized" << endl;
-			cout << "4  - Restart" << endl;
-			cout << "5  - Exit" << endl;
-			cout << "6  - Start" << endl;
-			cout << "7  - Stop" << endl;
-			cout << "8  - Configure" << endl;
-			cout << "9  - ConfigurationEnded" << endl;
-			cout << "10 - Suspend" << endl;
-			cout << "11 - Resume" << endl;
-			cout << "12 - chMode" << endl;
-			cout << "13 - ConfigX" << endl;
-			cout << "14 - eventX" << endl;
-			cout << "15 - eventY" << endl;
-			cout << "16 - Simulate" << endl;
-			cout << "17 - RunRealTime" << endl;
+			showInputs();
+
+			
 
 			EmbeddedSystemX sys = EmbeddedSystemX();
 
@@ -66,6 +51,10 @@ namespace Application{
 
 				switch (i)
 				{
+				case 0:
+					system("cls");
+					showInputs();
+					break;		
 				case 1:
 					sys.handleCommand(new SelfTestOk());
 					break;
@@ -124,6 +113,29 @@ namespace Application{
 					break;
 				}
 			}
+		}
+
+		void DiscreteProcessingThread::showInputs() {
+			using namespace std;
+			cout << "Type the number to execute the command:" << endl;
+			cout << "0  - *******************Clear console****************" << endl;
+			cout << "1  - SelfTestOk" << endl;
+			cout << "2  - SelfTestFailed" << endl;
+			cout << "3  - Initialized" << endl;
+			cout << "4  - Restart" << endl;
+			cout << "5  - Exit" << endl;
+			cout << "6  - Start" << endl;
+			cout << "7  - Stop" << endl;
+			cout << "8  - Configure" << endl;
+			cout << "9  - ConfigurationEnded" << endl;
+			cout << "10 - Suspend" << endl;
+			cout << "11 - Resume" << endl;
+			cout << "12 - chMode" << endl;
+			cout << "13 - ConfigX" << endl;
+			cout << "14 - eventX" << endl;
+			cout << "15 - eventY" << endl;
+			cout << "16 - Simulate" << endl;
+			cout << "17 - RunRealTime" << endl;
 		}
 	}
 }

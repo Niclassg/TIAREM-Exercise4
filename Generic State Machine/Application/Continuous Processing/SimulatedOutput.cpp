@@ -5,6 +5,9 @@
 namespace Application {
 	namespace ContinuousProcessing {
 
+		using namespace std;
+
+
 		SimulatedOutput* SimulatedOutput::_instance = 0;
 
 		SimulatedOutput* SimulatedOutput::Instance(void)
@@ -25,9 +28,9 @@ namespace Application {
 		{
 		}
 		
-		void SimulatedOutput::outputResult()
+		void SimulatedOutput::write()
 		{
-			using namespace std;
+			
 			cout << "Outputting simulated result." << endl;
 		}
 	}

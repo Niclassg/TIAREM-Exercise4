@@ -13,7 +13,7 @@ namespace Application{
 		{
 		}
 		
-		void Output::outputResult()
+		void Output::write()
 		{
 		}
 	}

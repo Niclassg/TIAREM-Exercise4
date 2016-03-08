@@ -49,6 +49,12 @@
     <Filter Include="Source Files\Application\ContinuousProcessing">
       <UniqueIdentifier>{295cd773-fc37-472c-aa44-9090e6444a91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Abstact HW">
+      <UniqueIdentifier>{9669544b-58d1-4588-a3ca-00ba9b29b7a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Abstract HW">
+      <UniqueIdentifier>{8ce7e5a9-8560-45a0-93dd-a3ab97c49634}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\Discrete Processing\Commands\chMode.h">
@@ -165,9 +171,6 @@
     <ClInclude Include="Application\Discrete Processing\DiscreteProcessingThread.h">
       <Filter>Header Files\Application\DiscreteProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="Application\Continuous Processing\Algorithm.h">
-      <Filter>Header Files\Application\ContinuousProcessing</Filter>
-    </ClInclude>
     <ClInclude Include="Application\Continuous Processing\Mode1Algorithm.h">
       <Filter>Header Files\Application\ContinuousProcessing</Filter>
     </ClInclude>
@@ -175,12 +178,6 @@
       <Filter>Header Files\Application\ContinuousProcessing</Filter>
     </ClInclude>
     <ClInclude Include="Application\Continuous Processing\Mode3Algorithm.h">
-      <Filter>Header Files\Application\ContinuousProcessing</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Continuous Processing\Input.h">
-      <Filter>Header Files\Application\ContinuousProcessing</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Continuous Processing\Output.h">
       <Filter>Header Files\Application\ContinuousProcessing</Filter>
     </ClInclude>
     <ClInclude Include="Application\Continuous Processing\RealTimeInput.h">
@@ -204,11 +201,17 @@
     <ClInclude Include="Application\ProcessingMode.h">
       <Filter>Header Files\Application</Filter>
     </ClInclude>
+    <ClInclude Include="Application\Continuous Processing\Input.h">
+      <Filter>Header Files\Abstact HW</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Continuous Processing\Output.h">
+      <Filter>Header Files\Abstact HW</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Continuous Processing\Algorithm.h">
+      <Filter>Header Files\Application\ContinuousProcessing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Generic State Machine.cpp">
-      <Filter>Source Files\Application</Filter>
-    </ClCompile>
     <ClCompile Include="Application\Discrete Processing\Commands\chMode.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
     </ClCompile>
@@ -335,12 +338,6 @@
     <ClCompile Include="Application\Continuous Processing\Mode3Algorithm.cpp">
       <Filter>Source Files\Application\ContinuousProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="Application\Continuous Processing\Input.cpp">
-      <Filter>Source Files\Application\ContinuousProcessing</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Continuous Processing\Output.cpp">
-      <Filter>Source Files\Application\ContinuousProcessing</Filter>
-    </ClCompile>
     <ClCompile Include="Application\Continuous Processing\RealTimeInput.cpp">
       <Filter>Source Files\Application\ContinuousProcessing</Filter>
     </ClCompile>
@@ -361,6 +358,15 @@
     </ClCompile>
     <ClCompile Include="Application\ProcessingMode.cpp">
       <Filter>Source Files\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Continuous Processing\Input.cpp">
+      <Filter>Source Files\Abstract HW</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Continuous Processing\Output.cpp">
+      <Filter>Source Files\Abstract HW</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

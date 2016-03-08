@@ -25,7 +25,7 @@ namespace Application{
 				pAlgorithm->execute();
 
 				setOutput();
-				pOutput->outputResult();
+				pOutput->write();
 				Sleep(2000);
 			}
 		}

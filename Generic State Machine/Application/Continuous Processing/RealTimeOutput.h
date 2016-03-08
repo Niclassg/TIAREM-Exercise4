@@ -10,7 +10,7 @@ namespace Application{
 		public:
 			static RealTimeOutput* Instance();
 			~RealTimeOutput();
-			void outputResult(void) override;
+			void write(void) override;
 		private:
 			static RealTimeOutput* _instance;
 		protected:

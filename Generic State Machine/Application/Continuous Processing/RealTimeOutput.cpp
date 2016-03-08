@@ -5,6 +5,8 @@
 namespace Application{
 	namespace ContinuousProcessing {
 
+		using namespace std;
+
 		RealTimeOutput* RealTimeOutput::_instance = 0;
 
 		RealTimeOutput* RealTimeOutput::Instance(void)
@@ -25,10 +27,10 @@ namespace Application{
 		{
 		}
 		
-		void RealTimeOutput::outputResult()
+		void RealTimeOutput::write()
 		{
-			using namespace std;
-			cout << "Realtime results are being displayed." << endl;
+			
+			cout << "Outputting realtime results." << endl;
 		}
 	}
 }

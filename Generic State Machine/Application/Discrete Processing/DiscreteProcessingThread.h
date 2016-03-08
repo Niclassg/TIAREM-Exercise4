@@ -11,6 +11,9 @@ namespace Application{
 			DiscreteProcessingThread();
 			~DiscreteProcessingThread();
 			void run(void) override;
+
+		private:
+			void showInputs();
 		};
 
 	}

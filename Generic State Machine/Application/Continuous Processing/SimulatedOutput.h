@@ -10,7 +10,7 @@ namespace Application{
 		public:
 			static SimulatedOutput* Instance();
 			~SimulatedOutput();
-			void outputResult(void) override;
+			void write(void) override;
 		private:
 			static SimulatedOutput* _instance;
 		protected:
